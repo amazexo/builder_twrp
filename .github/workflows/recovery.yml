@@ -15,11 +15,11 @@ on:
 
 env:
   MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-10.0
-  DEVICE: X682C
-  DT_LINK: https://github.com/Infinix-G70/android_device_twrp_infinix_x682c.git -b master
-  DT_PATH: device/infinix/X682C
+  DEVICE: SM-A235F
+  DT_LINK: https://github.com/twrpdtgen/android_device_samsung_a23
+  DT_PATH: device/samsung/SM-A235F
   TARGET: recoveryimage
-  TZ: Asia/Jakarta
+  TZ: Asia/Kolkata
 
 jobs:
   build:
@@ -70,5 +70,5 @@ jobs:
        - uses: actions/upload-artifact@v2
          with:
           name: recoveryimage
-          path: work/out/target/product/*/*.img
+          path: work/out/target/product/SM-A235F/recovery.img
 
